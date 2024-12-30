@@ -2,10 +2,10 @@ package domain
 
 type (
 	User struct {
-		Id    string
+		Id    int
 		Name  string
 		Email string
-		Age   string
+		Age   int
 	}
 	Opt func(*User)
 )
@@ -30,7 +30,7 @@ func WithEmail(email string) Opt {
 	}
 }
 
-func WithAge(age string) Opt {
+func WithAge(age int) Opt {
 	return func(u *User) {
 		u.Age = age
 	}

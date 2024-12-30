@@ -9,7 +9,7 @@ import (
 func TestNewUser(t *testing.T) {
 	name := "João"
 	email := "joao@email.com"
-	age := "20"
+	age := 20
 
 	user := NewUser(
 		WithName(name),
